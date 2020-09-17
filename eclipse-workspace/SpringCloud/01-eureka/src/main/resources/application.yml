@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: eureka8761.com
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://root:root@eureka8762.com:8762/eureka/
+      
+spring:
+  application:    name: 01-Eureka  security:    user:      name: root
+      password: root

@@ -1,0 +1,10 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/,http://root:root@localhost:8762/eureka/
+      
+spring:  application:    name: SEARCH
+    
+server: 
+   port: 8081
