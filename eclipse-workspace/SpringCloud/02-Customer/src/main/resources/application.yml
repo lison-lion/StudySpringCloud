@@ -8,6 +8,7 @@ SEARCH:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
 
+feign:  hystrix:    enabled: true
       
 spring:  application:    name: CUSTOMER
 

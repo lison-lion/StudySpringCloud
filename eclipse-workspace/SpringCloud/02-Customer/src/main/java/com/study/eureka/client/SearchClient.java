@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.study.eureka.client.entiey.Customer;
+//import com.study.eureka.client.fallback.SearchClientFallBack;
+import com.study.eureka.client.fallback.SearchClientFallBackFactory;
 
-@FeignClient("SEARCH")
+@FeignClient(value = "SEARCH",fallbackFactory = SearchClientFallBackFactory.class)
 public interface SearchClient {
 	
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
