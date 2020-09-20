@@ -1,0 +1,21 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/,http://root:root@localhost:8762/eureka/
+
+spring:  application:    name: ZUUL
+
+#zuul:##  ignored-services:##  - "*"
+##  ignored-patterns:##  - /**/search/**
+##  routes:##    search: /ss/**
+##    customer: /cc/**
+#  routes:
+#     kehu: #自定义名称
+#        path: /ccc/**
+#        service-id: customer #服务名称    
+   
+server:  port: 80
+
+ #上线不要配置
+management:  endpoints:     web:       exposure:         include:        - "*"
