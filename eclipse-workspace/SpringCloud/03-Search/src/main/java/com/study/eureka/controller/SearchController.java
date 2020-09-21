@@ -16,6 +16,9 @@ public class SearchController {
 	
 	@GetMapping("/search")
 	public String search() {
+		//故意引发异常，以测试fallback降级功能
+		
+//		int i = 1/0;//非测试时，注释
 		return "search：" + port;
 	}
 	

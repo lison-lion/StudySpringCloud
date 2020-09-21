@@ -27,15 +27,11 @@ public class DynamicRoutingFilter extends ZuulFilter {
 		//2.获取参数. rediskey
 		String redisKey = request.getParameter("redisKey");
 		
-		System.out.println( "---rediskey---" + redisKey );
-		
 		//3.判断
 		if( redisKey  !=null && redisKey.equalsIgnoreCase("customer") ) {
-			System.out.println(111);
 			context.put(FilterConstants.SERVICE_ID_KEY, "customer-v1");
 			context.put(FilterConstants.REQUEST_URI_KEY, "/customer");
 		}else  if( redisKey != null && redisKey.equalsIgnoreCase("search") ){
-			System.out.println(222);
 			context.put(FilterConstants.SERVICE_ID_KEY, "search");
 			context.put(FilterConstants.REQUEST_URI_KEY, "/search/1");
 		}

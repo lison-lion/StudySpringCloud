@@ -36,6 +36,10 @@
 			<module>02-Customer</module>
 			<module>03-Search</module>
 			<module>04-Eureka</module>
+			<module>05-Zuul</module>
+			<module>06-Sidecar</module>
 		</modules>
+		
+		
 		
 </project>

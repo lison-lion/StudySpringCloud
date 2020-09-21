@@ -5,6 +5,13 @@ eureka:
       defaultZone: http://root:root@localhost:8761/eureka/,http://root:root@localhost:8762/eureka/
       
 spring:  application:    name: SEARCH
+
+management:
+      endpoints:
+        web:
+          exposure:
+            include: hystrix.stream
+    #       include: '*'   #'*'代表开放所有端点。
     
 server: 
    port: 8081

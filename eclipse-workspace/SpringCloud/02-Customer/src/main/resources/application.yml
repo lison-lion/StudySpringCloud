@@ -4,11 +4,21 @@ eureka:
     serviceUrl:
       defaultZone: http://root:root@localhost:8761/eureka/,http://root:root@localhost:8762/eureka/
 
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: ["health","info","hystrix.stream"]
+
+
 SEARCH: 
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
 
 feign:  hystrix:    enabled: true
       
-spring:  application:    name: CUSTOMER
+version: v1
+
+spring:  application:    name: CUSTOMER-${version}
+   
 
